@@ -1,1 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
 
+header{
+    background-color: blueviolet;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 90%;
+    margin-inline: auto;
+}
+
+.navbar {
+    padding: 20px 0 20px 0;
+    position: fixed;
+    width: 100%;
+    background-color: #3A3A99;
+    align-items: center;
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
+}
+
+.navbar .box-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .box-navbar .menu {
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+}
+
+.navbar .box-navbar .mainLogo h1 {
+    color: white;
+}
+
+.navbar .box-navbar .menu li {
+    list-style-type: none;
+}
+
+.navbar .box-navbar .menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px 10px 15px;
+}
+
+.navbar .box-navbar .menu li a:hover {
+    background-color: rgb(162, 162, 162);
+    transition: all 0.3s ease;
+}
+
+.navbar .box-navbar .profile {
+    color: white;
+}
+
+.navbar .box-navbar .profile a {
+    text-decoration: none;
+    color: white;
+}
+
+.judul {
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3A3A99;
+    text-align: center;
+    
+}
+
+.judul .content h1 {
+    color: white;
+    font-size: 50px;
+    margin-top: 45px;
+}
+
+.judul .content p {
+    color: #EDD75A;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("img/bersama.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero::after {
+    /* content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 8%, rgba(255, 255, 255, 0) 50%); */
+}
+
+.hero .content {
+    padding: 1.4rem 6%;
+    width: 700px;
+}
+
+.hero .content h1 {
+    color: white;
+    font-size: 35px;
+    line-height: 1.3;
+}
+
+.hero .content p {
+    color: white;
+    font-size: 20;
+    margin-top: 10px;
+    font-weight: 50;
+}
+
+.hero .content button {
+    margin-top: 30px;
+    width: 170px;
+    height: 50px;
+    font-weight: bold;
+    background-color: #7079E4;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.hero .content button:hover {
+    background-color: #3A3A99;
+    transition: all 0.3s ease;
+}
+
+.quotes {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    text-align: center;
+}
+
+.quotes .content {
+    display: flex;
+    flex-direction: column;
+    padding: 1.4rem 6%;
+    width: 700px;
+}
+
+.quotes .content p {
+    width: 600px;
+    font-size: 20px;
+}
+
+.quotes .content h2 {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.about {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("img/bersama3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about .content {
+    margin-top: 120px;
+    padding: 85px;
+    max-width: 700px;
+    text-align: center;
+}
+
+.about .content .tittle h1 {
+    font-size: 35px;
+}
+
+
+.about .tittle {
+    margin-top: -200px;
+    margin-bottom: 20px; 
+    color: #EDD75A;
+    font-size: 35px;
+}
+ .about .content1 {
+    color: whitesmoke;
+    
+ }
+
+ .about #bagian2 {
+    color: #EDD75A;
+    margin-top: 50px;
+    font-size: 35px;
+ }
+
+ .about .boxes {
+    color: black;
+    font-size: small;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px; 
+    text-align: center;
+  }
+  
+  .about .box {
+    width: 200px; /* Sesuaikan dengan lebar kotak */
+    height: 200px; /* Sesuaikan dengan tinggi kotak */
+    background-color: #f0f0f0; /* Warna latar belakang kotak */
+    border-radius: 20px; /* Sesuaikan dengan kebutuhan */
+    padding: 20px; /* Sesuaikan dengan kebutuhan */
+    text-align: center;
+    margin: 0 10px; /* Jarak horizontal antar kotak */
+  }
+  
+  
