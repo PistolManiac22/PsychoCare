@@ -203,27 +203,27 @@ header{
     color: #EDD75A;
     font-size: 35px;
 }
- .about .content1 {
+.about .content1 {
     color: whitesmoke;
     
- }
+}
 
- .about #bagian2 {
+.about #bagian2 {
     color: #EDD75A;
     margin-top: 50px;
     font-size: 35px;
- }
+}
 
- .about .boxes {
+.about .boxes {
     color: black;
     font-size: small;
     display: flex;
     justify-content: space-around;
     margin-top: 20px; 
     text-align: center;
-  }
+}
   
-  .about .box {
+.about .box {
     width: 200px; /* Sesuaikan dengan lebar kotak */
     height: 200px; /* Sesuaikan dengan tinggi kotak */
     background-color: #f0f0f0; /* Warna latar belakang kotak */
@@ -231,6 +231,42 @@ header{
     padding: 20px; /* Sesuaikan dengan kebutuhan */
     text-align: center;
     margin: 0 10px; /* Jarak horizontal antar kotak */
-  }
+}
+
+.socmed {
+    background-color: #3A3A99;
+}
+
+.socmed .box-socmed {
+    width: 100%;
+    padding: 70px 20px 30px;
+}
+
+.socmed .box-socmed .icons {
+    display: flex;
+    justify-content: center;
+}
+
+.socmed .box-socmed .icons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socmed .box-socmed .icons a i {
+    font-size:1.5em;
+    color: #3A3A99;
+    opacity: 0.9;
+}
   
+.socmed .box-socmed .icons a:hover {
+    background-color: #3A3A99;
+    transition: 0.3s;
+}
   
+.socmed .box-socmed .icons a:hover i {
+    color: white;
+    transition: 0.3s;
+}
