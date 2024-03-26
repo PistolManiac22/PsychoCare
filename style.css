@@ -6,6 +6,7 @@
     scroll-behavior: smooth;
 }
 
+/* Section Navbar Start */
 header{
     background-color: blueviolet;
     background-size: cover;
@@ -37,7 +38,7 @@ header{
 .navbar .box-navbar .menu {
     display: flex;
     justify-content: center;
-    column-gap: 15px;
+    column-gap: 30px;
 }
 
 .navbar .box-navbar .mainLogo h1 {
@@ -51,12 +52,14 @@ header{
 .navbar .box-navbar .menu li a {
     text-decoration: none;
     color: white;
-    padding: 10px 15px 10px 15px;
+    padding: 8px 0;
+    transition: all;
+    transition-duration: 0.3s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
 }
 
 .navbar .box-navbar .menu li a:hover {
-    background-color: rgb(162, 162, 162);
-    transition: all 0.3s ease;
+    border-bottom: 1px solid white;
 }
 
 .navbar .box-navbar .profile {
@@ -65,8 +68,9 @@ header{
 
 .navbar .box-navbar .profile a {
     text-decoration: none;
-    color: white;
+    color: white;    
 }
+/* Section Navbar End */
 
 .judul {
     min-height: 50vh;
@@ -233,13 +237,14 @@ header{
     margin: 0 10px; /* Jarak horizontal antar kotak */
 }
 
+/* Section Social Media Start */
 .socmed {
     background-color: #3A3A99;
 }
 
 .socmed .box-socmed {
     width: 100%;
-    padding: 70px 20px 30px;
+    padding: 70px 20px 50px;
 }
 
 .socmed .box-socmed .icons {
@@ -270,3 +275,4 @@ header{
     color: white;
     transition: 0.3s;
 }
+/* Section Social Media End */

@@ -21,6 +21,9 @@
       rel="stylesheet"
     />
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <link rel="stylesheet" href="style.css" />
 
     <title>PsychoCare</title>
@@ -94,20 +97,20 @@
     <!--Section About Us Start-->
     <section class="about" id="about">
       <div class="content">
-        <div class="tittle">
+        <div class="tittle" data-aos="fade-up">
           <h1>About Us</h1>
         </div>
-        <div class="content1">
+        <div class="content1" data-aos="fade-up">
           <p>
             Hi perkenalkan website ini merupakan tempat dimana kamu bisa
             menceritakan semua kejadian yang kamu alami, ga perlu takut untuk
             menyampaikan rasa ketakutan yang sedang kamu rahasiakan. Yuk cerita
             disini!
           </p>
-          <p id="bagian2">
+          <p id="bagian2" data-aos="fade-up">
             <strong> What We Do? </strong>
           </p>
-          <div class="boxes">
+          <div class="boxes" data-aos="fade-up">
             <div class="box">
               Menghubungkan korban dengan pihak yang sudah ditentukan untuk
               konsultasi
@@ -141,6 +144,12 @@
     </section>
     <!--Section Social Media End-->
     
+
+    <script src="Script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     
   </body>
 </html>
