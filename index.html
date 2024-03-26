@@ -21,6 +21,9 @@
       rel="stylesheet"
     />
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <link rel="stylesheet" href="style.css" />
 
     <title>PsychoCare</title>
@@ -37,7 +40,7 @@
             <ul class="menu">
               <li><a href="#home">Home</a></li>
               <li><a href="#about">About Us</a></li>
-              <li><a>Social Media</a></li>
+              <li><a href="#socialmedia">Social Media</a></li>
               <li><a>App</a></li>
             </ul>
 
@@ -49,14 +52,16 @@
       </nav>
     </header>
 
+    <!--Section Judul Start-->
     <section class="judul">
       <main class="content">
         <h1>PsychoCare</h1>
         <p>Bersuara Lewat Kata</p>
       </main>
     </section>
+    <!--Section Judul End-->
 
-    <!--Section Hero-->
+    <!--Section Hero Start-->
     <section class="hero" id="home">
       <div class="content">
         <h1>
@@ -75,8 +80,9 @@
         <button>MULAI BERSUARA</button>
       </div>
     </section>
+    <!--Section Hero End-->
 
-    <!-- Section Quotes-->
+    <!-- Section Quotes Start-->
     <section class="quotes">
       <div class="content">
         <p>
@@ -86,24 +92,25 @@
         <h2>(Pasal 19 Konvensi Hak Anak)</h2>
       </div>
     </section>
+    <!-- Section Quotes End-->
 
     <!--Section About Us Start-->
     <section class="about" id="about">
       <div class="content">
-        <div class="tittle">
+        <div class="tittle" data-aos="fade-up">
           <h1>About Us</h1>
         </div>
-        <div class="content1">
+        <div class="content1" data-aos="fade-up">
           <p>
             Hi perkenalkan website ini merupakan tempat dimana kamu bisa
             menceritakan semua kejadian yang kamu alami, ga perlu takut untuk
             menyampaikan rasa ketakutan yang sedang kamu rahasiakan. Yuk cerita
             disini!
           </p>
-          <p id="bagian2">
+          <p id="bagian2" data-aos="fade-up">
             <strong> What We Do? </strong>
           </p>
-          <div class="boxes">
+          <div class="boxes" data-aos="fade-up">
             <div class="box">
               Menghubungkan korban dengan pihak yang sudah ditentukan untuk
               konsultasi
@@ -120,6 +127,29 @@
         </div>
       </div>
     </section>
+    <!--Section About Us End-->
+
+
+    <!--Section Social Media Start-->
+    <section class="socmed" id="socialmedia">
+        <div class="box-socmed">
+            <div class="icons">
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-twitter"></i></a>
+              <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+              <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+    <!--Section Social Media End-->
+    
+
+    <script src="Script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     
   </body>
 </html>
