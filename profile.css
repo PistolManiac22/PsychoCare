@@ -1,0 +1,264 @@
+header {
+    background-color: blueviolet;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 90%;
+    margin-inline: auto;
+}
+
+.navbar {
+    padding: 20px 0 20px 0;
+    position: fixed;
+    width: 100%;
+    background-color: #3A3A99;
+    align-items: center;
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
+}
+
+.navbar .box-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .box-navbar .menu {
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+}
+
+.navbar .box-navbar .mainLogo h1 {
+    color: white;
+}
+
+.navbar .box-navbar .menu li {
+    list-style-type: none;
+}
+
+.navbar .box-navbar .menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px 10px 15px;
+}
+
+.navbar .box-navbar .menu li a:hover {
+    background-color: rgb(162, 162, 162);
+    transition: all 0.3s ease;
+}
+
+.navbar .box-navbar .profil {
+    color: white;
+}
+
+.navbar .box-navbar .profil a {
+    text-decoration: none;
+    color: white;
+}
+
+.fa-solid {
+    color: white;
+}
+
+* {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+    color: rgb(57, 56, 56);
+}
+
+html, body {
+    height: 100%;
+    background-image: url("img/BG.jpg");
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    padding-right: 150px;
+}
+
+.profilepic {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    height: 55%;
+    align-items: center;
+    justify-content: top;
+    padding-top: 150px;
+}
+
+.profileborder {
+    display: flex;
+    flex-direction: column;
+    width: 51%;
+    height: 51%;
+    background-color: #6666e2;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60%;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.username {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.username h5 {
+    margin-top: 10px;
+    border: 1px solid;
+    border-radius: 50px;
+    background-color: transparent;
+    padding: 10px;
+    padding-right: 40px;
+    padding-left: 40px;
+    color: white;
+}
+
+.username h1 {
+    color: white;
+}
+
+.foto {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.username {
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 70%;
+    background-color: #e7e6e6;
+    align-items: left;
+    justify-content: left;
+    border-radius: 20px;
+    padding: 50px;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    margin-top: 60px;
+}
+
+.tombol {
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    justify-content: right;
+    margin-top: 40px;
+}
+
+#tombolKembali {
+    background-color: #6666e2;
+    color: rgb(255, 255, 255);
+}
+
+#tombolKembali:hover {
+    background-color: white;
+    color: rgb(57, 56, 56);
+}
+
+#ubahFoto {
+    color: #6666e2;
+    display: none;
+    margin-right: 30px;
+}
+
+#ubahFoto:hover {
+    color: white;
+}
+
+button {
+    color: #6666e2;
+    font-size: 22px;
+    border-radius: 50px;
+    padding: 12px;
+    margin-left: 35px;
+    padding-right: 35px;
+    padding-left: 35px;
+    background-color: white;
+    font-weight: bolder;
+    border: 2px solid rgb(174, 168, 193);
+    transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
+}
+
+button:hover {
+    background-color: #6666e2;
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.25);
+}
+
+.profile h1 {
+    font-size: 50px;
+}
+
+.profile hr {
+    margin-bottom: 15px;
+}
+
+.profile p {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.input {
+    color: grey;
+}
+
+.profile input[type="text"] {
+    margin-top: 2px;
+    font-size: 25px;
+    font-weight: bolder;
+    border-radius: 6px;
+    padding-left: 10px;
+    background-color: #ffffff;
+    border: 5px solid #ffffff;
+    outline: none;
+}
+
+.profile input[type="date"] {
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    border-radius: 6px;
+    border: 5px solid #ffffff;
+    font-weight: bolder;
+}
