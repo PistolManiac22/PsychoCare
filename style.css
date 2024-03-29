@@ -7,7 +7,9 @@
     outline: none;
     border: none;
     text-decoration: none;
+
 }
+
 
 /* Section Navbar Start */
 .navbar {
@@ -60,8 +62,10 @@
 }
 /* Section Navbar End */
 
+/* Section Judul Start */
 .judul {
-    min-height: 50vh;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,20 +76,22 @@
 
 .judul .content h1 {
     color: white;
-    font-size: 50px;
+    font-size: 4rem;
     margin-top: 45px;
 }
 
 .judul .content p {
     color: #EDD75A;
+    font-size: 1.2rem;
 }
+/* Section Judul End */
+
 
 .hero {
     width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 100px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("img/bersama.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -216,13 +222,13 @@
 }
   
 .about .box {
-    width: 200px; /* Sesuaikan dengan lebar kotak */
-    height: 200px; /* Sesuaikan dengan tinggi kotak */
-    background-color: #f0f0f0; /* Warna latar belakang kotak */
-    border-radius: 20px; /* Sesuaikan dengan kebutuhan */
-    padding: 20px; /* Sesuaikan dengan kebutuhan */
+    width: 200px;
+    height: 200px; 
+    background-color: #f0f0f0; 
+    border-radius: 20px; 
+    padding: 20px; 
     text-align: center;
-    margin: 0 10px; /* Jarak horizontal antar kotak */
+    margin: 0 10px; 
 }
 
 /* Section Social Media Start */
@@ -279,6 +285,7 @@ footer p {
 }
 /* Footer End*/
 
+
 /* Media Queries*/
 /* Laptop*/
 @media (max-width: 1366px) {
@@ -309,7 +316,7 @@ footer p {
         top: 100%;
         right: -100%;
         background: white;
-        width: 30rem;
+        width: 23rem;
         height: 100vh;
         transition: 0.3s;
     }
@@ -323,10 +330,11 @@ footer p {
         display: block;
         margin: 1.5rem;
         padding: 0.5rem;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .navbar .menu a::after {
+        border-bottom: 0.1rem solid black;
         transform-origin: 0 0;
     }
 
@@ -336,3 +344,5 @@ footer p {
 
 
 }
+
+ 
