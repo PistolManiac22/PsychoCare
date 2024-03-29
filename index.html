@@ -24,33 +24,31 @@
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="style.css" />
 
     <title>PsychoCare</title>
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <div class="container">
-          <div class="box-navbar">
-            <div class="mainLogo">
-              <h1>MEDICAL</h1>
-            </div>
 
-            <ul class="menu">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#socialmedia">Social Media</a></li>
-              <li><a>App</a></li>
-            </ul>
+    <!--Navbar Start-->
+    <nav class="navbar">
+      <div class="mainLogo">
+        <h1>MEDICAL</h1>
+      </div>
 
-            <div class="profile">
-              <a href=""><i class="fa-solid fa-user"></i></a>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
+      <ul class="menu">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#socialmedia">Social Media</a>
+      </ul>
+
+      <div class="menu-icons">
+        <a href="" id="profile"><i class="fa-solid fa-user"></i></a>
+        <a href="" id="hamburger-menu"><i class="ph ph-list"></i></a>
+      </div>
+    </nav>
+    <!--Navbar End-->
 
     <!--Section Judul Start-->
     <section class="judul">
@@ -129,28 +127,32 @@
     </section>
     <!--Section About Us End-->
 
-
     <!--Section Social Media Start-->
     <section class="socmed" id="socialmedia">
-        <div class="box-socmed">
-            <div class="icons">
-              <a href=""><i class="fa-brands fa-facebook"></i></a>
-              <a href=""><i class="fa-brands fa-instagram"></i></a>
-              <a href=""><i class="fa-brands fa-twitter"></i></a>
-              <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-              <a href=""><i class="fa-brands fa-youtube"></i></a>
-            </div>
+      <div class="box-socmed">
+        <div class="icons">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
         </div>
+      </div>
     </section>
     <!--Section Social Media End-->
-    
+
+    <!--Footer Start-->
+    <footer>
+      <div class="container">
+          <p>&copy; 2024 PsychoCare. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <!--Footer End-->
 
     <script src="Script.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
-    
   </body>
 </html>
-
