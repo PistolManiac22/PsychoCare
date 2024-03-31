@@ -73,7 +73,7 @@
 .dropdown ul {
     position: absolute;
     margin: 5px 0 0 0;
-    padding: 10px -10px -21rem;
+    padding: 10px -5px -21rem;
     width: var(--dropdown-width);
     left: -3.5rem;
     margin-left: calc((var(--dropdown-width) / 2) * -1);
