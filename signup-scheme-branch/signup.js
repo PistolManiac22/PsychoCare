@@ -74,8 +74,6 @@ class Account {
 const account = new Account();
 
 function generatedAccountDetail() {
-  account.setGender(document.getElementsByTagName('option').item(document.getElementById('gender').options.selectedIndex).text);
-
   console.log(`Akun dengan rincian:
   ${account.getUsername()}, ${account.getRealname()},
   ${account.getEmail()}, ${account.getInstitution()},
@@ -111,7 +109,11 @@ document.getElementById('birth').addEventListener('input', (event) => {
 
 document.getElementById('password').addEventListener('input', (event) => {
   account.setPassword(event.target.value);
-  console.log(account.getPassword());
+})
+
+document.getElementById('gender').addEventListener('change', event => {
+  account.setGender(event.target.value);
+  console.log(account.getGender());
 })
 
 nextBtnFirst.addEventListener("click", (event) => {
@@ -132,29 +134,47 @@ nextBtnFirst.addEventListener("click", (event) => {
   }
 });
 nextBtnSec.addEventListener("click", (event) => {
-  if (account.getEmail() && account.getInstitution()) {
-    event.preventDefault();
-    slidePage.style.marginLeft = "-50%";
-    bullet[current - 1].classList.add("active");
-    progressCheck[current - 1].classList.add("active");
-    progressText[current - 1].classList.add("active");
-    current += 1; 
-  }else if(!(account.getEmail() || account.getInstitution())){
-    alert('Masukkan email serta Universitas/institutsi!');
-  }else if(!account.getInstitution()){
-    alert('Masukkan Sekolah/Institutsi!');
-  }else{
-    alert('Masukkan email!');
+  if (account.getRealname() && account.getBirth() && account.getGender()) {
+    if (account.getGender() == 'dont-process') {
+      alert('Masukkan jenis kelamin');
+    } else {
+      event.preventDefault();
+      slidePage.style.marginLeft = "-50%";
+      bullet[current - 1].classList.add("active");
+      progressCheck[current - 1].classList.add("active");
+      progressText[current - 1].classList.add("active");
+      current += 1;
+    }
+  } else if (!(account.getRealname() || account.getBirth() || account.getGender())) {
+    alert('Masukkan Nama asli, tanggal lahir, serta jenis kelamin!');
+  } else {
+    if (!account.getRealname()) {
+      alert('Masukkan Nama asli!');
+    }
+    if (!account.getBirth()) {
+      alert('Masukkan tanggal lahir!');
+    }
+    if (!account.getGender()) {
+      alert('Masukkan jenis kelamin');
+    }
   }
 });
 nextBtnThird.addEventListener("click", (event) => {
-  event.preventDefault();
-  slidePage.style.marginLeft = "-75%";
-  bullet[current - 1].classList.add("active");
-  progressCheck[current - 1].classList.add("active");
-  progressText[current - 1].classList.add("active");
-  current += 1;
-  generatedAccountDetail();
+  if (account.getEmail() && account.getInstitution()) {
+    event.preventDefault();
+    slidePage.style.marginLeft = "-75%";
+    bullet[current - 1].classList.add("active");
+    progressCheck[current - 1].classList.add("active");
+    progressText[current - 1].classList.add("active");
+    current += 1;
+    generatedAccountDetail();
+  } else if (!(account.getEmail() || account.getInstitution())) {
+    alert('Masukkan email serta Universitas/institutsi!');
+  } else if (!account.getInstitution()) {
+    alert('Masukkan Sekolah/Institutsi!');
+  } else {
+    alert('Masukkan email!');
+  }
 });
 submitBtn.addEventListener("click", () => {
   bullet[current - 1].classList.add("active");
@@ -168,9 +188,6 @@ submitBtn.addEventListener("click", () => {
   }, 800);
 });
 prevBtnSec.addEventListener("click", (event) => {
-  ()=> {
-    document.getElementsByTagName('header').item(0).scrollIntoView({ behavior: "smooth", block: "start" });
-  }
   event.preventDefault();
   slidePage.style.marginLeft = "0%";
   bullet[current - 2].classList.remove("active");
@@ -213,7 +230,6 @@ document.querySelector('.toggle-password').addEventListener('click', function ()
   }
 });
 
-window.onload = ()=> {
+window.onload = () => {
   document.body.style.overflow = 'scroll';
-  //document.documentElement.scrollTop = 0;
 }

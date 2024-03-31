@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;	
-	font-family: Roboto, sans-serif;
+	font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -97,9 +97,17 @@ body {
 	background: none;
 	padding: 10px;
 	padding-left: 24px;
-	font-weight: 700;
+	font-weight: bolder;
 	width: 75%;
 	transition: .2s;
+}
+
+.field-icon {
+	float: right;
+	left: -70px;
+	margin-top: 13px;
+	position: relative;
+	z-index: 1;
 }
 
 .login__input:active,
@@ -110,32 +118,38 @@ body {
 }
 
 .login__submit {
-	background: #fff;
+	background: #5d3bf3;
 	font-size: 14px;
 	margin-top: 30px;
 	padding: 16px 20px;
 	border-radius: 26px;
 	border: 1px solid #D4D3E8;
-	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: bolder;
 	display: flex;
 	align-items: center;
 	width: 100%;
-	color: #4C489D;
+	color: #ffffff;
 	box-shadow: 0px 2px 2px #5C5696;
 	cursor: pointer;
 	transition: .2s;
 }
 
-.login__submit:active,
-.login__submit:focus,
-.login__submit:hover {
-	border-color: #6A679E;
-	outline: none;
-}
 
 .button__icon {
 	font-size: 24px;
 	margin-left: auto;
-	color: #7875B5;
+	color: #ffffff;
+}
+
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+	.button__icon{
+		color: #000;
+		transition: 0.5s, color 0.5s, box-shadow 0.5s;
+	}
+	background: #ffffff;
+	color: black;
+	transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
+	box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.25);
 }

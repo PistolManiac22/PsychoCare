@@ -113,8 +113,8 @@ form .page .btns button.next{
   position: relative;
 }
 .container .progress-bar .step p{
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: 100;
+  font-size: 100px;
   color: #000;
   margin-bottom: 8px;
 }
