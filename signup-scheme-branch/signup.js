@@ -198,14 +198,11 @@ prevBtnFourth.addEventListener("click", (event) => {
 
 // Mendapatkan elemen dengan kelas toggle-password
 document.querySelector('.toggle-password').addEventListener('click', function () {
-  // Toggle class fa-eye dan fa-eye-slash pada elemen yang diklik
   this.classList.toggle('fa-eye');
   this.classList.toggle('fa-eye-slash');
 
-  // Mendapatkan elemen input yang sesuai dengan atribut toggle pada elemen yang diklik
   const input = document.querySelector('#password');
 
-  // Memeriksa apakah input tidak null sebelum menggunakan atributnya
   if (input) {
     // Mengubah tipe input dari password ke text atau sebaliknya
     if (input.getAttribute('type') === 'password') {
@@ -214,7 +211,6 @@ document.querySelector('.toggle-password').addEventListener('click', function ()
       input.setAttribute('type', 'password');
     }
   }
-
 });
 
 window.onload = ()=> {
