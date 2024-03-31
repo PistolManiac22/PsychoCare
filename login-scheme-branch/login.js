@@ -13,3 +13,23 @@ document.querySelector('.toggle-password').addEventListener('click', function ()
       }
     }
 });
+
+let username_email, password;
+
+document.getElementById('username-email').addEventListener('input', (event) =>{
+  username_email = event.target.value;
+})
+
+document.getElementById('password').addEventListener('input', event =>{
+  password = event.target.value;
+})
+
+document.getElementById('submit').addEventListener('click', event =>{
+  if (username_email && password) {
+    event.preventDefault();
+    alert('Selamat anda berhasil login!');
+    location.assign('../profile.html');
+  }else{
+    alert('Username/mail atau Password salah');
+  }
+})

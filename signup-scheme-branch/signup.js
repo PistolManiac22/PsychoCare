@@ -70,6 +70,21 @@ class Account {
   setPassword(password) {
     this.password = password;
   }
+
+  getVerification(){
+    const value = [this.username, this.realname, this.email, this.institution,
+      this.gender, this.birth, this.password
+    ];
+    let verifValue = true;
+    value.forEach(value => {
+      if (!value) {
+        verifValue = false;
+        return 0;
+      }
+    })
+    return verifValue;
+  }
+
 }
 const account = new Account();
 
@@ -182,9 +197,12 @@ submitBtn.addEventListener("click", () => {
   progressText[current - 1].classList.add("active");
   current += 1;
   setTimeout(function () {
-
-    alert("Your Form Successfully Signed up");
-    location.reload();
+    if (account.getVerification()) {
+      alert("Selamat.. anda telah terdaftar!");
+      location.assign('../profile.html');
+    }else{
+      alert("Mohon maaf.. Coba periksa kembali form pendaftaran anda")
+    }
   }, 800);
 });
 prevBtnSec.addEventListener("click", (event) => {
