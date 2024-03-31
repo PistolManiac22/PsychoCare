@@ -86,7 +86,7 @@
 }
 /* Section Judul End */
 
-
+/* Section Hero Start */
 .hero {
     width: 100%;
     min-height: 100vh;
@@ -142,7 +142,9 @@
     background-color: #3A3A99;
     transition: all 0.3s ease;
 }
+/* Section Hero Start */
 
+/* Section quotes Start */
 .quotes {
     width: 100%;
     min-height: 50vh;
@@ -161,13 +163,27 @@
 }
 
 .quotes .content p {
-    width: 600px;
     font-size: 20px;
 }
 
 .quotes .content h2 {
     margin-top: 20px;
     font-size: 15px;
+}
+/* Section quotes End */
+
+/* Section About Us Start*/
+.about {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("img/bersama3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .about {
@@ -184,10 +200,14 @@
 }
 
 .about .content {
-    margin-top: 120px;
+    margin-top: 100px;
     padding: 85px;
     max-width: 700px;
     text-align: center;
+}
+
+.about .content .content1 p {
+    font-size: 1.5rem;
 }
 
 .about .content .tittle h1 {
@@ -199,7 +219,7 @@
     margin-top: -200px;
     margin-bottom: 20px; 
     color: #EDD75A;
-    font-size: 35px;
+    font-size: 2.2rem;
 }
 .about .content1 {
     color: whitesmoke;
@@ -208,28 +228,31 @@
 
 .about #bagian2 {
     color: #EDD75A;
-    margin-top: 50px;
-    font-size: 35px;
+    margin-top: 20px;
+    font-size: 3rem;
 }
 
 .about .boxes {
     color: black;
     font-size: small;
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px; 
-    text-align: center;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 10px; 
+    margin-top: 20px;
 }
-  
+
 .about .box {
-    width: 200px;
-    height: 200px; 
-    background-color: #f0f0f0; 
-    border-radius: 20px; 
-    padding: 20px; 
+    width: calc(33.33% - 20px);
+    max-width: 200px;
+    min-width: 150px;
+    height: 200px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    padding: 20px;
     text-align: center;
-    margin: 0 10px; 
 }
+/* Section About Us End*/
 
 /* Section Social Media Start */
 .socmed {
@@ -341,8 +364,6 @@ footer p {
     .navbar .menu a:hover::after {
         transform: scaleX(0.2);
     }
-
-
 }
 
  
