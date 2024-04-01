@@ -1,3 +1,20 @@
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #6c10ff;
+  border-radius: 1em;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
