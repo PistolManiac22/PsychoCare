@@ -49,6 +49,11 @@
   transform: scaleX(0.5);
 }
 
+.navbar .menu-icons {
+  display: flex;
+  align-items: center;
+}
+
 .navbar .menu-icons a {
   color: white;
   margin: 0 0.5rem;
@@ -61,6 +66,8 @@
     padding: 0;
     margin-right: 2em;
     border: none;
+    display: flex;
+    align-items: center;
 }
 
 .dropdown summary {
@@ -378,15 +385,15 @@ footer {
   box-shadow: 0 2px 4px rgb(0, 0, 0);
 }
 
-<<<<<<< HEAD
+
 footer p {
      margin: 0;
 }
-=======
+
 /* footer p {
     margin : 0;
 } */
->>>>>>> afb0cc4def352faa667b0321acdaebbf7bbe0388
+
 /* Footer End*/
 
 /* Media Queries*/
