@@ -200,7 +200,7 @@ submitBtn.addEventListener("click", event => {
     current += 1;
     if (account.getVerification()) {
       alert("Selamat.. anda telah terdaftar!");
-      location.assign('./index.html');
+      location.assign('../HTML/index.html');
     } else {
       alert("Mohon maaf.. Coba periksa kembali form pendaftaran anda")
     }

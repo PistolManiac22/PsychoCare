@@ -28,7 +28,7 @@ document.getElementById('submit').addEventListener('click', event =>{
   if (username_email && password) {
     event.preventDefault();
     alert('Selamat anda berhasil login!');
-    location.assign('./index.html');
+    location.assign('../HTML/index.html');
   }else{
     alert('Username/mail atau Password salah');
   }

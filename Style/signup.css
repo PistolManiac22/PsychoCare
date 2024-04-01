@@ -29,7 +29,7 @@ body{
   justify-content: center;
   min-height: 100vh;
   overflow: hidden;
-  background: url("./img/BG.jpg"), -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
+  background: url("../img/BG.jpg"), -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
 }
 ::selection{
   color: #fff;
