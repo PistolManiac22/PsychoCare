@@ -71,9 +71,9 @@ class Account {
     this.password = password;
   }
 
-  getVerification(){
+  getVerification() {
     const value = [this.username, this.realname, this.email, this.institution,
-      this.gender, this.birth, this.password
+    this.gender, this.birth, this.password
     ];
     let verifValue = true;
     value.forEach(value => {
@@ -191,16 +191,17 @@ nextBtnThird.addEventListener("click", (event) => {
     alert('Masukkan email!');
   }
 });
-submitBtn.addEventListener("click", () => {
-  bullet[current - 1].classList.add("active");
-  progressCheck[current - 1].classList.add("active");
-  progressText[current - 1].classList.add("active");
-  current += 1;
+submitBtn.addEventListener("click", event => {
+  event.preventDefault();
   setTimeout(function () {
+    bullet[current - 1].classList.add("active");
+    progressCheck[current - 1].classList.add("active");
+    progressText[current - 1].classList.add("active");
+    current += 1;
     if (account.getVerification()) {
       alert("Selamat.. anda telah terdaftar!");
-      location.assign('./');
-    }else{
+      location.assign('./index.html');
+    } else {
       alert("Mohon maaf.. Coba periksa kembali form pendaftaran anda")
     }
   }, 800);
