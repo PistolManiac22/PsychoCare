@@ -49,12 +49,96 @@
   transform: scaleX(0.5);
 }
 
+.navbar .menu-icons {
+  display: flex;
+  align-items: center;
+}
+
 .navbar .menu-icons a {
   color: white;
   margin: 0 0.5rem;
   font-size: 1.2rem;
 }
 
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    padding: 0;
+    margin-right: 2em;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown summary {
+    list-style: none;
+    list-style-type: none;
+}
+
+.dropdown ul {
+    position: absolute;
+    margin: 5px 0 0 0;
+    padding: 10px -5px -21rem;
+    width: var(--dropdown-width);
+    left: -3.5rem;
+    margin-left: calc((var(--dropdown-width) / 2) * -1);
+    box-sizing: border-box;
+    z-index: 2;
+    border-radius: 6px;
+    list-style:none;
+}
+
+.dropdown ul li {
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown:hover{
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.25);
+    
+    transition: 0.5s, color 0.5s, box-shadow 0.5s;
+}
+
+.dropdown summary a i:hover{
+    color: black;
+    transition: 0.2s, color 0.2s, box-shadow 0.1s;
+}
+
+.dropdown ul li a:link,
+.dropdown ul li a:visited {
+    display: inline-block;
+    padding: 10px 0.8rem;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #3232bd;
+    color: rgb(194, 190, 190);
+    text-decoration: none;
+}
+
+.dropdown ul li a:hover {
+    background-color: blue;
+    color: aliceblue;
+    font-weight: bolder;
+    transition: 0.2s, color 0.2s, box-shadow 0.1s;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+/* Close the dropdown with outside clicks */
+.dropdown>summary::before {
+    display: none;
+}
+
+.dropdown[open]>summary::before {
+    content: ' ';
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: 1s;
+}
 #hamburger-menu {
   display: none;
 }
@@ -301,9 +385,15 @@ footer {
   box-shadow: 0 2px 4px rgb(0, 0, 0);
 }
 
+
+footer p {
+     margin: 0;
+}
+
 /* footer p {
     margin : 0;
 } */
+
 /* Footer End*/
 
 /* Media Queries*/
