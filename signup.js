@@ -199,7 +199,7 @@ submitBtn.addEventListener("click", () => {
   setTimeout(function () {
     if (account.getVerification()) {
       alert("Selamat.. anda telah terdaftar!");
-      location.assign('../profile.html');
+      location.assign('./');
     }else{
       alert("Mohon maaf.. Coba periksa kembali form pendaftaran anda")
     }
