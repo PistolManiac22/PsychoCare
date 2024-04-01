@@ -1,24 +1,36 @@
-const question1 = document.getElementById("q1");
-const question2 = document.getElementById("q2");
-const nextButton = document.getElementById("next");
-const submitButton = document.getElementById("submit");
-const backButton1 = document.getElementById("tombolkembali");
-const backButton2 = document.getElementById("tombolkembali2");
+function changeId() {
+  const element = document.getElementById('q1');
+  const element2 = document.getElementById('q2');
+  element.id = 'pose1';
+  element2.id = 'pose2';
+  document.getElementById('next').onclick = changeId2;
+}
 
-function next() {
-  question1.style.display = "none";
-  question2.style.display = "block";
-  nextButton.style.display = "none";
-  submitButton.style.display = "block";
-  backButton1.style.display = "block";
-  backButton2.style.display = "none";
+function changeId2() {
+  const element = document.getElementById('pose1');
+  const element2 = document.getElementById('pose2');
+  const element3 = document.getElementById('q3');
+  element.id = 'pose3';
+  element2.id = 'pose1';
+  element3.id = 'pose2';
 }
 
 function back() {
-  nextButton.style.display = "block";
-  submitButton.style.display = "none";
-  question1.style.display = "block";
-  question2.style.display = "none";
-  backButton1.style.display = "none";
-  backButton2.style.display = "block";
+  const element = document.getElementById('pose1');
+  const element2 = document.getElementById('pose2');
+  const element3 = document.getElementById('pose3');
+  element3.id = 'pose-3';
+  element.id = 'pose-1';
+  element2.id = 'pose-2';
+  document.getElementById('tombolkembali2').onclick = back2;
+}
+
+function back2() {
+  const element = document.getElementById('pose-1');
+  const element2 = document.getElementById('pose-2');
+  const element3 = document.getElementById('pose-3');
+  const element4 = document.getElementById('pose-4');
+  element3.id = 'pose-1';
+  element.id = 'pose-2';
+  element2.id = 'pose-4';
 }

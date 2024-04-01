@@ -11,8 +11,256 @@ body {
   align-items: center;
   flex-direction: column;
 }
+.container {
+  overflow: hidden;
+  position: relative;
+}
 
+#pose1 {
+  height: 10vw;
+  width: 20vw;
+  position: absolute;
+  font-size: 1vw;
+  animation: slide-up 0.5s ease-in-out forwards;
+}
+
+#pose1 b {
+  animation: slide-up-b 0.5s ease-in-out forwards;
+}
+
+#pose1 h1 {
+  animation: slide-up-h1 0.5s ease-in-out forwards;
+}
+
+@keyframes slide-up {
+  0% {
+    top: 50vh;
+    font-size: 1.1vw;
+    width: 30vw;
+    height: 15vw;
+  }
+  100% {
+    top: -20px;
+    font-size: 0.5vw;
+    color: gray;
+  }
+}
+@keyframes slide-up-b {
+  0% {
+    top: 50vh;
+    font-size: 1.1vw;
+  }
+  100% {
+    top: -20px;
+    font-size: 0.5vw;
+    color: gray;
+  }
+}
+
+@keyframes slide-up-h1 {
+  0% {
+    top: 50vh;
+    font-size: 1.9vw;
+  }
+  100% {
+    top: -20px;
+    font-size: 0.8vw;
+  }
+}
+#pose-1 {
+  height: 10vw;
+  width: 20vw;
+  position: absolute;
+  font-size: 0.5vw;
+  animation: slide-down 0.5s ease-in-out forwards;
+}
+
+#pose-1 b {
+  animation: slide-down-b 0.5s ease-in-out forwards;
+}
+
+#pose-1 h1 {
+  animation: slide-down-h1 0.5s ease-in-out forwards;
+}
+
+@keyframes slide-down {
+  0% {
+    top: -20px;
+    font-size: 0.5vw;
+    color: gray;
+  }
+  100% {
+    top: 40vh;
+    font-size: 1.1vw;
+    width: 30vw;
+    height: 15vw;
+  }
+}
+
+@keyframes slide-down-b {
+  0% {
+    top: -20px;
+    font-size: 0.5vw;
+    color: gray;
+  }
+  100% {
+    top: 50vh;
+    font-size: 1.1vw;
+  }
+}
+
+@keyframes slide-down-h1 {
+  0% {
+    top: -20px;
+    font-size: 0.8vw;
+  }
+  100% {
+    top: 50vh;
+    font-size: 1.9vw;
+  }
+}
+
+#pose2 {
+  position: absolute;
+  font-size: 1vw;
+  animation: slide-up-pose2 0.5s ease-in-out forwards;
+}
+@keyframes slide-up-pose2 {
+  0% {
+    top: 100vh;
+    font-size: 1.1vw;
+  }
+  100% {
+    top: 300px;
+    font-size: 0.5vw;
+    color: rgb(0, 0, 0);
+  }
+}
+
+#pose-2 {
+  position: absolute;
+  font-size: 0.5vw;
+  animation: slide-down-pose-2 0.5s ease-in-out forwards;
+}
+@keyframes slide-down-pose-2 {
+  0% {
+    top: 300px;
+    font-size: 0.5vw;
+    color: rgb(0, 0, 0);
+  }
+  100% {
+    top: 100vh;
+    font-size: 1.1vw;
+  }
+}
+
+#pose3 {
+  position: absolute;
+  height: 10vw;
+  width: 20vw;
+  font-size: 0.5vw;
+  position: absolute;
+  animation: slide-up-pose3 0.5s ease-in-out forwards;
+}
+#pose3 b {
+  animation: slide-up-pose3-b 0.5s ease-in-out forwards;
+}
+
+#pose3 h1 {
+  animation: slide-up-pose3-h1 0.5s ease-in-out forwards;
+}
+@keyframes slide-up-pose3 {
+  0% {
+    top: -20px;
+    font-size: 0.5vw;
+    color: gray;
+  }
+  100% {
+    top: -200px;
+    font-size: 0.5vw;
+    color: gray;
+  }
+}
+@keyframes slide-up-pose3-h1 {
+  0% {
+    top: -20px;
+    font-size: 0.5vw;
+    color: gray;
+  }
+  100% {
+    top: -200px;
+    font-size: 0.5vw;
+    color: gray;
+  }
+}
+@keyframes slide-up-pose3-b {
+  0% {
+    top: -20px;
+    font-size: 0.5vw;
+    color: gray;
+  }
+  100% {
+    top: -200px;
+    font-size: 0.5vw;
+    color: gray;
+  }
+}
+#pose-3 {
+  position: absolute;
+  height: 10vw;
+  width: 20vw;
+  font-size: 0.5vw;
+  position: absolute;
+  animation: slide-down-pose-3 0.5s ease-in-out forwards;
+}
+#pose-3 b {
+  animation: slide-down-pose-3-b 0.5s ease-in-out forwards;
+}
+
+#pose-3 h1 {
+  animation: slide-down-pose-3-h1 0.5s ease-in-out forwards;
+}
+@keyframes slide-down-pose-3 {
+  0% {
+    top: -200px;
+    font-size: 0.5vw;
+    color: gray;
+  }
+  100% {
+    top: -20px;
+    font-size: 0.5vw;
+    color: gray;
+  }
+}
+@keyframes slide-down-pose-3-h1 {
+  0% {
+    top: -200px;
+    font-size: 0.5vw;
+    color: gray;
+  }
+  100% {
+    top: -20px;
+    font-size: 0.5vw;
+    color: gray;
+  }
+}
+@keyframes slide-down-pose-3-b {
+  0% {
+    top: -200px;
+    font-size: 0.5vw;
+    color: gray;
+  }
+  100% {
+    top: -20px;
+    font-size: 0.5vw;
+    color: gray;
+  }
+}
+#pose-4 {
+  display: none;
+}
 .question {
+  top: 50vh;
   background-color: rgb(235, 233, 233);
   width: 30vw;
   height: 15vw;
@@ -36,35 +284,10 @@ body {
 
 #q2 {
   display: none;
-  animation: slide-up 0.5s ease-in-out forwards,
-    fade-in 0.5s ease-in-out forwards;
 }
-
-#q1 {
-  animation: slide-up 0.5s ease-in-out forwards,
-    fade-in 0.5s ease-in-out forwards;
+#q3 {
+  display: none;
 }
-
-@keyframes slide-up {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 b {
   font-size: 1.1vw;
 }
