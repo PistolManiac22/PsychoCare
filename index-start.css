@@ -9,6 +9,22 @@
   text-decoration: none;
 }
 
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #6c10ff;
+  border-radius: 1em;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
 /* Section Navbar Start */
 .navbar {
   display: flex;
@@ -55,6 +71,101 @@
   font-size: 1.2rem;
 }
 
+.menu-icons {
+  display: flex;
+  align-items: center;
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+  padding: 0;
+  margin-right: 2em;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown summary {
+  list-style: none;
+  list-style-type: none;
+}
+
+.dropdown ul {
+  position: absolute;
+  margin: 5px 0 0 0;
+  padding: 10px -5px -21rem;
+  width: 15vw;
+  left: -3.5rem;
+  margin-left: calc((var(--dropdown-width) / 2) * -1);
+  box-sizing: border-box;
+  z-index: 2;
+  border-radius: 1px;
+  list-style:none;
+}
+
+#a1{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#a2{
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.dropdown ul li {
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown:hover{
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.25);
+  
+  transition: 0.5s, color 0.5s, box-shadow 0.5s;
+}
+
+.dropdown summary a i:hover{
+  color: rgb(255, 255, 255);
+  transition: 0.2s, color 0.2s, box-shadow 0.1s;
+  transform: scale(1.5);
+}
+
+.dropdown ul li a:link,
+.dropdown ul li a:visited {
+  display: inline-block;
+  padding: 10px 0.8rem;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.dropdown ul li a:hover {
+  background-color: rgb(98, 66, 141);
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  transition: 0.2s, color 0.2s, box-shadow 0.1s;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+/* Close the dropdown with outside clicks */
+.dropdown>summary::before {
+  display: none;
+}
+
+.dropdown[open]>summary::before {
+  content: ' ';
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  transition: 1s;
+}
 #hamburger-menu {
   display: none;
 }

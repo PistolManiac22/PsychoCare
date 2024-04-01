@@ -5,13 +5,31 @@
   outline: none;
   font-family: 'Poppins', sans-serif;
 }
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #6c10ff;
+  border-radius: 1em;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
 body{
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   overflow: hidden;
-  background: url("../img/BG.jpg"), -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
+  background: url("./img/BG.jpg"), -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
 }
 ::selection{
   color: #fff;
@@ -22,7 +40,7 @@ body{
   background: linear-gradient(60deg, #d6d2d2, #ebebeb);
   text-align: center;
   border-radius: 5px;
-  padding: 50px 35px 10px 35px;
+  padding: 50px 31px 10px 35px;
   box-shadow: 0px 0px 24px #171718;
 }
 .container header{

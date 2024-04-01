@@ -207,6 +207,7 @@ submitBtn.addEventListener("click", event => {
   }, 800);
 });
 prevBtnSec.addEventListener("click", (event) => {
+  document.body.style.overflow = 'hidden';
   event.preventDefault();
   slidePage.style.marginLeft = "0%";
   bullet[current - 2].classList.remove("active");
@@ -249,6 +250,6 @@ document.querySelector('.toggle-password').addEventListener('click', function ()
   }
 });
 
-window.onload = () => {
-  document.body.style.overflow = 'scroll';
-}
+// window.onload = () => {
+//   document.body.style.overflow = 'scroll';
+// }
