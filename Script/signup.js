@@ -72,19 +72,24 @@ class Account {
   }
 
   getVerification() {
-    const value = [this.username, this.realname, this.email, this.institution,
-    this.gender, this.birth, this.password
+    const value = [
+      this.username,
+      this.realname,
+      this.email,
+      this.institution,
+      this.gender,
+      this.birth,
+      this.password,
     ];
     let verifValue = true;
-    value.forEach(value => {
+    value.forEach((value) => {
       if (!value) {
         verifValue = false;
         return 0;
       }
-    })
+    });
     return verifValue;
   }
-
 }
 const account = new Account();
 
@@ -95,63 +100,64 @@ function generatedAccountDetail() {
   ${account.getBirth()}, ${account.getGender()},
   ${account.getPassword()}`);
 
-  document.getElementById('show-username').innerHTML = account.getUsername();
-  document.getElementById('show-name').innerHTML = account.getRealname();
-  document.getElementById('show-email').innerHTML = account.getEmail();
-  document.getElementById('show-institution').innerHTML = account.getInstitution();
-  document.getElementById('show-birth').innerHTML = account.getBirth();
+  document.getElementById("show-username").innerHTML = account.getUsername();
+  document.getElementById("show-name").innerHTML = account.getRealname();
+  document.getElementById("show-email").innerHTML = account.getEmail();
+  document.getElementById("show-institution").innerHTML =
+    account.getInstitution();
+  document.getElementById("show-birth").innerHTML = account.getBirth();
 }
 
-document.getElementById('username').addEventListener('input', (event) => {
+document.getElementById("username").addEventListener("input", (event) => {
   account.setUsername(event.target.value);
-})
+});
 
-document.getElementById('name').addEventListener('input', (event) => {
+document.getElementById("name").addEventListener("input", (event) => {
   account.setRealname(event.target.value);
-})
+});
 
-document.getElementById('email').addEventListener('input', (event) => {
+document.getElementById("email").addEventListener("input", (event) => {
   account.setEmail(event.target.value);
-})
+});
 
-document.getElementById('institution').addEventListener('input', (event) => {
+document.getElementById("institution").addEventListener("input", (event) => {
   account.setInstitution(event.target.value);
-})
+});
 
-document.getElementById('birth').addEventListener('input', (event) => {
+document.getElementById("birth").addEventListener("input", (event) => {
   account.setBirth(event.target.value);
-})
+});
 
-document.getElementById('password').addEventListener('input', (event) => {
+document.getElementById("password").addEventListener("input", (event) => {
   account.setPassword(event.target.value);
-})
+});
 
-document.getElementById('gender').addEventListener('change', event => {
+document.getElementById("gender").addEventListener("change", (event) => {
   account.setGender(event.target.value);
   console.log(account.getGender());
-})
+});
 
 nextBtnFirst.addEventListener("click", (event) => {
   if (account.username && account.password) {
     event.preventDefault();
-    document.body.style.overflow = 'scroll';
+    document.body.style.overflow = "scroll";
     slidePage.style.marginLeft = "-25%";
     bullet[current - 1].classList.add("active");
     progressCheck[current - 1].classList.add("active");
     progressText[current - 1].classList.add("active");
     current += 1;
   } else if (!(account.username || account.password)) {
-    alert('Masukkan Nama Pengguna serta Password!');
+    alert("Masukkan Nama Pengguna serta Password!");
   } else if (!account.password) {
-    alert('Masukkan Password!');
+    alert("Masukkan Password!");
   } else {
-    alert('Masukkan Nama Pengguna');
+    alert("Masukkan Nama Pengguna");
   }
 });
 nextBtnSec.addEventListener("click", (event) => {
   if (account.getRealname() && account.getBirth() && account.getGender()) {
-    if (account.getGender() == 'dont-process') {
-      alert('Masukkan jenis kelamin');
+    if (account.getGender() == "dont-process") {
+      alert("Masukkan jenis kelamin");
     } else {
       event.preventDefault();
       slidePage.style.marginLeft = "-50%";
@@ -160,17 +166,19 @@ nextBtnSec.addEventListener("click", (event) => {
       progressText[current - 1].classList.add("active");
       current += 1;
     }
-  } else if (!(account.getRealname() || account.getBirth() || account.getGender())) {
-    alert('Masukkan Nama asli, tanggal lahir, serta jenis kelamin!');
+  } else if (
+    !(account.getRealname() || account.getBirth() || account.getGender())
+  ) {
+    alert("Masukkan Nama asli, tanggal lahir, serta jenis kelamin!");
   } else {
     if (!account.getRealname()) {
-      alert('Masukkan Nama asli!');
+      alert("Masukkan Nama asli!");
     }
     if (!account.getBirth()) {
-      alert('Masukkan tanggal lahir!');
+      alert("Masukkan tanggal lahir!");
     }
     if (!account.getGender()) {
-      alert('Masukkan jenis kelamin');
+      alert("Masukkan jenis kelamin");
     }
   }
 });
@@ -184,14 +192,14 @@ nextBtnThird.addEventListener("click", (event) => {
     current += 1;
     generatedAccountDetail();
   } else if (!(account.getEmail() || account.getInstitution())) {
-    alert('Masukkan email serta Universitas/institutsi!');
+    alert("Masukkan email serta Universitas/institutsi!");
   } else if (!account.getInstitution()) {
-    alert('Masukkan Sekolah/Institutsi!');
+    alert("Masukkan Sekolah/Institutsi!");
   } else {
-    alert('Masukkan email!');
+    alert("Masukkan email!");
   }
 });
-submitBtn.addEventListener("click", event => {
+submitBtn.addEventListener("click", (event) => {
   event.preventDefault();
   setTimeout(function () {
     bullet[current - 1].classList.add("active");
@@ -200,14 +208,14 @@ submitBtn.addEventListener("click", event => {
     current += 1;
     if (account.getVerification()) {
       alert("Selamat.. anda telah terdaftar!");
-      location.assign('./index.html');
+      location.assign("../HTML/index.html");
     } else {
-      alert("Mohon maaf.. Coba periksa kembali form pendaftaran anda")
+      alert("Mohon maaf.. Coba periksa kembali form pendaftaran anda");
     }
   }, 800);
 });
 prevBtnSec.addEventListener("click", (event) => {
-  document.body.style.overflow = 'hidden';
+  document.body.style.overflow = "hidden";
   event.preventDefault();
   slidePage.style.marginLeft = "0%";
   bullet[current - 2].classList.remove("active");
@@ -232,23 +240,24 @@ prevBtnFourth.addEventListener("click", (event) => {
   current -= 1;
 });
 
-
 // Mendapatkan elemen dengan kelas toggle-password
-document.querySelector('.toggle-password').addEventListener('click', function () {
-  this.classList.toggle('fa-eye');
-  this.classList.toggle('fa-eye-slash');
+document
+  .querySelector(".toggle-password")
+  .addEventListener("click", function () {
+    this.classList.toggle("fa-eye");
+    this.classList.toggle("fa-eye-slash");
 
-  const input = document.querySelector('#password');
+    const input = document.querySelector("#password");
 
-  if (input) {
-    // Mengubah tipe input dari password ke text atau sebaliknya
-    if (input.getAttribute('type') === 'password') {
-      input.setAttribute('type', 'text');
-    } else {
-      input.setAttribute('type', 'password');
+    if (input) {
+      // Mengubah tipe input dari password ke text atau sebaliknya
+      if (input.getAttribute("type") === "password") {
+        input.setAttribute("type", "text");
+      } else {
+        input.setAttribute("type", "password");
+      }
     }
-  }
-});
+  });
 
 // window.onload = () => {
 //   document.body.style.overflow = 'scroll';

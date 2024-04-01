@@ -79,7 +79,7 @@ ul.menu a {
 html,
 body {
   height: 725px;
-  background-image: url("img/BG.jpg");
+  background-image: url("../img/BG.jpg");
 }
 
 .wrapper {

@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../Style/index-start.css" />
 
     <title>PsychoCare</title>
   </head>
@@ -55,37 +55,22 @@
             <a id="profile"><i class="fa-solid fa-user"></i></a>
           </summary>
           <ul>
-            <li><a href="./profile.html" id="a1"><i class="fa-solid fa-user"></i> | Profil Anda</a></li>
-            <li><a href="./index-start.html" id="a2"><i class="fa-solid fa-right-from-bracket"></i> | Log Out</a></li>
+            <li>
+              <a href="login.html" id="a1"
+                ><i class="fa-solid fa-circle-user"></i> | Login</a
+              >
+            </li>
+            <li>
+              <a href="signup.html" id="a2"
+                ><i class="fa-solid fa-pen-to-square"></i> | Sign Up</a
+              >
+            </li>
           </ul>
+        </details>
         <a href="#" id="hamburger-menu"><i class="ph ph-list"></i></a>
       </div>
     </nav>
     <!--Navbar End-->
-    <button class="chatbot-toggler" id="tombol">
-      <span class="material-symbols-rounded">mode_comment</span>
-      <span class="material-symbols-outlined">close</span>
-    </button>
-    <div class="chatbot">
-      <header>
-        <h2>Chatbot</h2>
-        <span class="close-btn material-symbols-outlined">close</span>
-      </header>
-      <ul class="chatbox">
-        <li class="chat incoming">
-          <span class="material-symbols-outlined">smart_toy</span>
-          <p>Halo 👋<br />Bisa ceritain masalahmu?</p>
-        </li>
-      </ul>
-      <div class="chat-input">
-        <textarea
-          placeholder="Enter a message..."
-          spellcheck="false"
-          required
-        ></textarea>
-        <span id="send-btn" class="material-symbols-rounded">send</span>
-      </div>
-    </div>
     <!--Section Judul Start-->
     <section class="judul">
       <main class="content">
@@ -187,7 +172,7 @@
     </footer>
     <!--Footer End-->
 
-    <script src="Script.js"></script>
+    <script src="../Script/index-start.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();

@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-*{
+* {
   margin: 0;
   padding: 0;
   outline: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -23,19 +23,20 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: #555;
 }
 
-body{
+body {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   overflow: hidden;
-  background: url("./img/BG.jpg"), -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
+  background: url("../img/BG.jpg"),
+    -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
 }
-::selection{
+::selection {
   color: #fff;
   background: #1c36c7;
 }
-.container{
+.container {
   width: 330px;
   background: linear-gradient(60deg, #d6d2d2, #ebebeb);
   text-align: center;
@@ -43,30 +44,30 @@ body{
   padding: 50px 31px 10px 35px;
   box-shadow: 0px 0px 24px #171718;
 }
-.container header{
+.container header {
   font-size: 35px;
   font-weight: 600;
   margin: 0 0 30px 0;
 }
-.container .form-outer{
+.container .form-outer {
   width: 100%;
   overflow: hidden;
 }
-.container .form-outer form{
+.container .form-outer form {
   display: flex;
   width: 400%;
 }
-.form-outer form .page{
+.form-outer form .page {
   width: 25%;
   transition: margin-left 0.3s ease-in-out;
 }
 
-.form-outer form .page .title{
+.form-outer form .page .title {
   text-align: left;
   font-size: 17px;
   font-weight: 500;
 }
-.form-outer form .page .field{
+.form-outer form .page .field {
   width: 330px;
   height: 45px;
   margin: 45px 0;
@@ -74,7 +75,7 @@ body{
   position: relative;
 }
 
-.form-outer form .page-confirm .field{
+.form-outer form .page-confirm .field {
   width: 330px;
   height: 30px;
   margin: 35px 0;
@@ -82,13 +83,13 @@ body{
   position: relative;
 }
 
-form .page .field .label{
+form .page .field .label {
   position: absolute;
   top: -30px;
   font-weight: bolder;
 }
 
-form .page .field input{
+form .page .field input {
   text-align: left;
   width: 100%;
   margin-top: 2px;
@@ -101,7 +102,7 @@ form .page .field input{
   outline: none;
 }
 
-form .page .field input[type="password"]{
+form .page .field input[type="password"] {
   text-align: left;
   width: 95.5%;
   margin-top: 2px;
@@ -118,15 +119,15 @@ form .page .field input[type="password"]{
   
 } */
 
-form .page .field span{
+form .page .field span {
   height: 50%;
   width: 50%;
   padding-left: 15px;
   font-size: 18px;
-  text-align:left;
+  text-align: left;
 }
 
-form .page .field select{
+form .page .field select {
   text-align: left;
   width: 100%;
   margin-top: 2px;
@@ -138,7 +139,7 @@ form .page .field select{
   border: 5px solid #ffffff;
   outline: none;
 }
-form .page .field button{
+form .page .field button {
   width: 100%;
   height: calc(100% + 5px);
   border: 2px solid rgb(156, 156, 156);
@@ -151,45 +152,45 @@ form .page .field button{
   text-transform: uppercase;
   transition: 0.5s ease;
 }
-form .page .btns button{
-  margin-top: -20px!important;
+form .page .btns button {
+  margin-top: -20px !important;
 }
-form .page .btns button.prev{
+form .page .btns button.prev {
   color: #5d16cf;
   background: #ffffff;
   margin-right: 3px;
   font-size: 17px;
 }
-form .page .btns button.next{
+form .page .btns button.next {
   color: #ffffff;
   background: #5d16cf;
   margin-left: 3px;
 }
 
-form .page .field button.prev:hover{
+form .page .field button.prev:hover {
   background: #5d16cf;
   color: #ffffff;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.25);
 }
 
-form .page .field button.next:hover{
+form .page .field button.next:hover {
   background: #ffffff;
   color: black;
   transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.25);
 }
 
-form-outer form .page-confirm{
+form-outer form .page-confirm {
   width: 25%;
   transition: margin-left 0.3s ease-in-out;
 }
-.form-outer form .page-confirm .title{
+.form-outer form .page-confirm .title {
   text-align: left;
   font-size: 17px;
   font-weight: 500;
 }
 
-form .page-confirm .field .label{
+form .page-confirm .field .label {
   position: absolute;
   top: -1.5em;
   font-weight: bolder;
@@ -207,14 +208,14 @@ form .page-confirm .field span {
   outline: none;
 }
 
-form .page-confirm .field select{
+form .page-confirm .field select {
   width: 100%;
   padding-left: 10px;
   font-size: 17px;
   font-weight: 500;
 }
 
-form .page-confirm .field button{
+form .page-confirm .field button {
   width: 100%;
   height: calc(100% + 5px);
   border: 2px solid rgb(156, 156, 156);
@@ -227,52 +228,51 @@ form .page-confirm .field button{
   text-transform: uppercase;
   transition: 0.5s ease;
 }
-form .page-confirm .btns button{
-  margin-top: -20px!important;
+form .page-confirm .btns button {
+  margin-top: -20px !important;
 }
-form .page-confirm .btns button.prev{
+form .page-confirm .btns button.prev {
   color: #5d16cf;
   background: #ffffff;
   margin-right: 3px;
   font-size: 17px;
 }
-form .page-confirm .btns button.submit{
+form .page-confirm .btns button.submit {
   color: #ffffff;
   background: #5d16cf;
   margin-left: 3px;
 }
 
-form .page-confirm .field button.prev:hover{
+form .page-confirm .field button.prev:hover {
   background: #5d16cf;
   color: #ffffff;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.25);
 }
 
-form .page-confirm .field button.submit:hover{
+form .page-confirm .field button.submit:hover {
   background: #ffffff;
   color: black;
   transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.25);
 }
 
-
-.container .progress-bar{
+.container .progress-bar {
   display: flex;
   margin: 40px 0;
   user-select: none;
 }
-.container .progress-bar .step{
+.container .progress-bar .step {
   text-align: center;
   width: 100%;
   position: relative;
 }
-.container .progress-bar .step p{
+.container .progress-bar .step p {
   font-weight: 500;
   font-size: 15px;
   color: #000;
   margin-bottom: 8px;
 }
-.progress-bar .step .bullet{
+.progress-bar .step .bullet {
   height: 25px;
   width: 25px;
   border: 2px solid #000;
@@ -293,48 +293,48 @@ form .page-confirm .field button.submit:hover{
   z-index: 2;
 }
 
-.progress-bar .step .bullet.active{
+.progress-bar .step .bullet.active {
   border-color: #d43f8d;
   background: #ffffff;
 }
-.progress-bar .step .bullet span{
+.progress-bar .step .bullet span {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
-.progress-bar .step .bullet.active span{
+.progress-bar .step .bullet.active span {
   display: none;
 }
 .progress-bar .step .bullet:before,
-.progress-bar .step .bullet:after{
+.progress-bar .step .bullet:after {
   position: absolute;
-  content: '';
+  content: "";
   bottom: 11px;
   right: -51px;
   height: 3px;
   width: 44px;
   background: #262626;
 }
-.progress-bar .step .bullet.active:after{
+.progress-bar .step .bullet.active:after {
   background: #d43f8d;
   transform: scaleX(0);
   transform-origin: left;
   animation: animate 0.3s linear forwards;
 }
 @keyframes animate {
-  100%{
+  100% {
     transform: scaleX(1);
   }
 }
 .progress-bar .step:last-child .bullet:before,
-.progress-bar .step:last-child .bullet:after{
+.progress-bar .step:last-child .bullet:after {
   display: none;
 }
-.progress-bar .step p.active{
+.progress-bar .step p.active {
   color: #d43f8d;
   transition: 0.2s linear;
 }
-.progress-bar .step .check{
+.progress-bar .step .check {
   position: absolute;
   left: 50%;
   top: 70%;
@@ -342,7 +342,7 @@ form .page-confirm .field button.submit:hover{
   transform: translate(-50%, -50%);
   display: none;
 }
-.progress-bar .step .check.active{
+.progress-bar .step .check.active {
   display: block;
   color: #000000;
 }
