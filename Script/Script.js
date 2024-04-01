@@ -55,7 +55,6 @@ const generateResponse = (chatElement) => {
     }),
   };
 
-
   // Kirim permintaan POST ke API, dapatkan respons dan atur respons sebagai teks paragraf
   fetch(API_URL, requestOptions)
     .then((res) => res.json())
