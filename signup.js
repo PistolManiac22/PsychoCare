@@ -252,3 +252,8 @@ document.querySelector('.toggle-password').addEventListener('click', function ()
 window.onload = () => {
   document.body.style.overflow = 'scroll';
 }
+
+// document.getElementById('step-1').addEventListener('click', event=>{
+//   event.preventDefault()
+//   slidePage.style.marginLeft = "0%";
+// })
