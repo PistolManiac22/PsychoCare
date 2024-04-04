@@ -290,6 +290,14 @@ button:hover {
   outline: none;
 }
 
+.profile span {
+  margin-top: 2px;
+  font-size: 0.8vw;
+  font-weight: bolder;
+  border-radius: 6px;
+  outline: none;
+}
+
 .profile input[type="date"] {
   font-size: 1vw;
   padding-top: 15px;

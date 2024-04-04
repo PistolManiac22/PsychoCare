@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile</title>
-    <link rel="stylesheet" href="../Style/profile.css" />
+    <link rel="stylesheet" href="profile.css" />
     <!--Font Awesome-->
     <link
       rel="stylesheet"
@@ -82,7 +82,7 @@
       <div class="left">
         <div class="profilepic">
           <div class="profileborder">
-            <img class="foto" src="../img/bersama.jpg" alt="profile" />
+            <img class="foto" src="img/bersama.jpg" alt="profile" />
           </div>
           <div class="username">
             <button id="ubahFoto">UBAH FOTO</button>
@@ -103,7 +103,7 @@
             value="RAY"
             readonly
           />
-          <span id="validation-detail"></span>
+          <span id="username-validation-detail"></span>
           <p><label for="nama">NAMA</label></p>
           <input
             type="text"
@@ -136,6 +136,7 @@
             value="raymico.fuji49@upi.edu"
             readonly
           />
+          <span id="email-validation-detail"></span>
           <div class="tombol">
             <button
               onclick="window.location.href = 'index.html#home';"
@@ -148,6 +149,6 @@
         </div>
       </div>
     </div>
-    <script src="../Script/profile.js"></script>
+    <script src="./profile-dev.js"></script>
   </body>
 </html>
