@@ -1,0 +1,70 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
+    <link rel="stylesheet" href="../Style/quiz.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="question" id="q1">
+        <h1>Apakah anda merasa Stress?</h1>
+        <hr />
+        <br />
+        <b
+          ><input type="radio" name="answer" value="option1" /> Sangat Setuju</b
+        >
+        <br />
+        <b><input type="radio" name="answer" value="option2" /> Setuju</b>
+        <br />
+        <b><input type="radio" name="answer" value="option3" /> Tidak Setuju</b>
+      </div>
+      <div class="question" id="q2">
+        <h1>Apakah anda dirundung1?</h1>
+        <hr />
+        <br />
+        <b
+          ><input type="radio" name="answer" value="option1" /> Sangat Setuju</b
+        >
+        <br />
+        <b><input type="radio" name="answer" value="option2" /> Setuju</b>
+        <br />
+        <b><input type="radio" name="answer" value="option3" /> Tidak Setuju</b>
+      </div>
+      <div class="question" id="q3">
+        <h1>Apakah anda dirundung2?</h1>
+        <hr />
+        <br />
+        <b
+          ><input type="radio" name="answer" value="option1" /> Sangat Setuju</b
+        >
+        <br />
+        <b><input type="radio" name="answer" value="option2" /> Setuju</b>
+        <br />
+        <b><input type="radio" name="answer" value="option3" /> Tidak Setuju</b>
+      </div>
+      <button id="next" onclick="changeId()">Lanjut</button>
+      <button id="submit" onclick="window.location.href = 'index.html#home';">
+        Submit
+      </button>
+      <button id="tombolkembali" onclick="back()">Kembali</button>
+      <button id="tombolkembali2" onclick="back()">Kembali</button>
+    </div>
+    <script src="../Script/quiz.js"></script>
+  </body>
+</html>
