@@ -1,0 +1,20 @@
+{
+  "name": "psychocare",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PistolManiac22/PsychoCare.git"
+  },
+  "author": "Raymico Fuji, Naufal Abdala Syawali, Rafi Nouval, Anggo Maulana Putra, Purnama",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PistolManiac22/PsychoCare/issues"
+  },
+  "homepage": "https://github.com/PistolManiac22/PsychoCare#readme",
+  "readme": "Node version v20.12.1 \nnpm version 10.5.0"
+}
