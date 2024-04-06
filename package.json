@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./Script/server.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
     "url": "https://github.com/PistolManiac22/PsychoCare/issues"
   },
   "homepage": "https://github.com/PistolManiac22/PsychoCare#readme",
-  "readme": "Node version v20.12.1 \nnpm version 10.5.0"
+  "readme": "Node version v20.12.1 \nnpm version 10.5.0",
+  "dependencies": {
+    "node-kernel": "^1.0.2"
+  }
 }
