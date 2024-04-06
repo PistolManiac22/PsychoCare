@@ -269,7 +269,7 @@ button:hover {
   margin-bottom: 20px;
 }
 
-.profile p {
+.profile p, .profile span {
   margin-top: 1px;
   font-size: 1vw;
   font-weight: bold;
