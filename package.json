@@ -19,6 +19,8 @@
   "homepage": "https://github.com/PistolManiac22/PsychoCare#readme",
   "readme": "Node version v20.12.1 \nnpm version 10.5.0",
   "dependencies": {
-    "node-kernel": "^1.0.2"
+    "chatgpt": "^5.2.5",
+    "node-kernel": "^1.0.2",
+    "openai": "^4.33.0"
   }
 }

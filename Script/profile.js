@@ -11,6 +11,15 @@ var tombolKembali = document.getElementById("tombolKembali");
 showUsername.innerText = inputUsername.value;
 showName.innerText = inputName.value;
 
+class Account{
+  username;
+  name;
+  sekolah;
+  tgl;
+  email;
+}
+const account = new Account();
+
 function toggleEdit() {
   if (inputUsername.readOnly) {
     inputUsername.readOnly = false;
@@ -23,6 +32,10 @@ function toggleEdit() {
     ubahFoto.style.display = "block";
     tombolKembali.style.display = "none";
     document.getElementById("editButton").innerText = "SIMPAN";
+    document.getElementById('editButton').style.display = 'none';
+    if(validasiEmail(inputEmail.value) && validasiUsername(inputUsername.value)) {
+      document.getElementById('editButton').style.display = 'block';
+    }
     for (var i = 0; i < warnaTextInput.length; i++) {
       warnaTextInput[i].style.color = "Black";
     }
@@ -157,3 +170,78 @@ closeBtn.addEventListener("click", () =>
 chatbotToggler.addEventListener("click", () =>
   document.body.classList.toggle("show-chatbot")
 );
+
+
+inputEmail.addEventListener('input', event => {
+  account.email = event.target.value;
+  if (validasiEmail(account.email) && validasiUsername(inputUsername.value)) {
+    document.getElementById("editButton").style.marginTop = '-2vw';
+    document.getElementById('editButton').style.display = 'block';
+  }
+})
+
+function validasiEmail(email) {
+  const printValidation = document.getElementById('email-validation-detail');
+  printValidation.style.display = 'block';
+  printValidation.style.color = "red";
+  if ((email.lastIndexOf('@')+2 < email.lastIndexOf('.') && email.includes('@')) && (email.lastIndexOf('.') < email.length - 2)) {
+    printValidation.innerText = "email yang dimasukkan valid";
+    printValidation.style.color = "blue";
+    return true;
+  }else if(!email.includes('@') && !email.includes('.')) {
+    printValidation.innerText = "email yang dimasukkan tidak valid";
+  }else if (email.includes('@') ) {
+    printValidation.innerText = "email tidak mengandung \".\"";
+  }else{
+    printValidation.innerText = "email tidak mengandung \"@\"";
+  }
+  return false;
+}
+
+inputUsername.addEventListener('input', event =>{ 
+  account.username = event.target.value;
+  document.getElementById('editButton').style.display = 'none';
+  if (validasiUsername(account.username) && validasiEmail(inputEmail.value)) {
+    document.getElementById("editButton").style.marginTop = '-2vw';
+    document.getElementById('editButton').style.display = 'block';
+  }
+})
+
+function validasiUsername(username) {
+  const hurufBesar = /[A-Z]/.test(username);
+  const hurufKecil = /[a-z]/.test(username);
+  const angka = /\d/.test(username);
+  const panjangValid = username.length <= 12;
+  const printValidation = document.getElementById('username-validation-detail');
+  printValidation.style.display = 'block';
+  printValidation.style.color = "red";
+  if (hurufBesar && hurufKecil && angka && panjangValid) {
+    printValidation.innerText = "username yang dimasukkan valid";
+    printValidation.style.color = "blue";
+    return true;
+  } else if (hurufBesar && hurufKecil && angka) {
+    printValidation.innerText = "panjang username melebihi 12 karakter.";
+    return false;
+  } else if (hurufBesar && hurufKecil && panjangValid) {
+    printValidation.innerText = "username tidak mengandung angka.";
+    return false;
+  } else if (hurufBesar && angka && panjangValid) {
+    printValidation.innerText = "username tidak mengandung huruf kecil.";
+    return false;
+  } else if (hurufKecil && angka && panjangValid) {
+    printValidation.innerText = "username tidak mengandung huruf besar.";
+    return false;
+  } else if (hurufBesar && panjangValid) {
+    printValidation.innerText = "username tidak mengandung huruf kecil dan angka.";
+    return false;
+  } else if (hurufKecil && panjangValid) {
+    printValidation.innerText = "username tidak mengandung huruf besar dan angka.";
+    return false;
+  } else if (angka && panjangValid) {
+    printValidation.innerText = "username tidak mengandung huruf besar dan huruf kecil.";
+    return false;
+  } else {
+    printValidation.innerText = "isikan nama pengguna mu";
+    return false;
+  }
+}

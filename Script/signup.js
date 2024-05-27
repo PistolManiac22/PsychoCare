@@ -13,6 +13,11 @@ let current = 1;
 // const fs = new FileSystemWritableFileStream();
 // fs
 
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById('username-validation-detail').style.display = 'none';
+  document.getElementById('email-validation-detail').style.display = 'none';
+})
+
 class Account {
   username;
   realname;
@@ -97,8 +102,7 @@ function generatedAccountDetail() {
   console.log(`Akun dengan rincian:
   ${account.getUsername()}, ${account.getRealname()},
   ${account.getEmail()}, ${account.getInstitution()},
-  ${account.getBirth()}, ${account.getGender()},
-  ${account.getPassword()}`);
+  ${account.getBirth()}, ${account.getGender()}`)
 
   document.getElementById("show-username").innerHTML = account.getUsername();
   document.getElementById("show-name").innerHTML = account.getRealname();
@@ -109,7 +113,9 @@ function generatedAccountDetail() {
 }
 
 document.getElementById("username").addEventListener("input", (event) => {
-  account.setUsername(event.target.value);
+  if(validasiUsername(event.target.value)){
+    account.setUsername(event.target.value);
+  }
 });
 
 document.getElementById("name").addEventListener("input", (event) => {
@@ -117,7 +123,9 @@ document.getElementById("name").addEventListener("input", (event) => {
 });
 
 document.getElementById("email").addEventListener("input", (event) => {
-  account.setEmail(event.target.value);
+  if(validasiEmail(event.target.value)){
+    account.setEmail(event.target.value);
+  }
 });
 
 document.getElementById("institution").addEventListener("input", (event) => {
@@ -134,8 +142,64 @@ document.getElementById("password").addEventListener("input", (event) => {
 
 document.getElementById("gender").addEventListener("change", (event) => {
   account.setGender(event.target.value);
-  console.log(account.getGender());
 });
+
+function validasiUsername(username) {
+  const hurufBesar = /[A-Z]/.test(username);
+  const hurufKecil = /[a-z]/.test(username);
+  const angka = /\d/.test(username);
+  const panjangValid = username.length <= 12;
+  const printValidation = document.getElementById('username-validation-detail');
+  printValidation.style.display = 'block';
+  printValidation.style.color = "red";
+  if (hurufBesar && hurufKecil && angka && panjangValid) {
+    printValidation.innerText = "username yang dimasukkan valid";
+    printValidation.style.color = "blue";
+    return true;
+  } else if (hurufBesar && hurufKecil && angka) {
+    printValidation.innerText = "panjang username melebihi 12 karakter.";
+    return false;
+  } else if (hurufBesar && hurufKecil && panjangValid) {
+    printValidation.innerText = "username tidak mengandung angka.";
+    return false;
+  } else if (hurufBesar && angka && panjangValid) {
+    printValidation.innerText = "username tidak mengandung huruf kecil.";
+    return false;
+  } else if (hurufKecil && angka && panjangValid) {
+    printValidation.innerText = "username tidak mengandung huruf besar.";
+    return false;
+  } else if (hurufBesar && panjangValid) {
+    printValidation.innerText = "username tidak mengandung huruf kecil dan angka.";
+    return false;
+  } else if (hurufKecil && panjangValid) {
+    printValidation.innerText = "username tidak mengandung huruf besar dan angka.";
+    return false;
+  } else if (angka && panjangValid) {
+    printValidation.innerText = "username tidak mengandung huruf besar dan huruf kecil.";
+    return false;
+  } else {
+    printValidation.innerText = "isikan nama pengguna mu";
+    return false;
+  }
+}
+
+function validasiEmail(email) {
+  const printValidation = document.getElementById('email-validation-detail');
+  printValidation.style.display = 'block';
+  printValidation.style.color = "red";
+  if ((email.lastIndexOf('@')+2 < email.lastIndexOf('.') && email.includes('@')) && (email.lastIndexOf('.') < email.length - 2)) {
+    printValidation.innerText = "email yang dimasukkan valid";
+    printValidation.style.color = "blue";
+    return true;
+  }else if(!email.includes('@') && !email.includes('.')) {
+    printValidation.innerText = "email yang dimasukkan tidak valid";
+  }else if (email.includes('@') ) {
+    printValidation.innerText = "email tidak mengandung \".\"";
+  }else{
+    printValidation.innerText = "email tidak mengandung \"@\"";
+  }
+  return false;
+}
 
 nextBtnFirst.addEventListener("click", (event) => {
   if (account.username && account.password) {
