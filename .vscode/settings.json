@@ -1,3 +1,14 @@
 {
-  "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501,
+  "javascript.suggest.enabled": true,
+  "javascript.validate.enable": true,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.suggest.showWords": true,
+  "editor.suggest.showFunctions": true,
+  "editor.suggest.showVariables": true
 }
